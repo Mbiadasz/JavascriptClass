@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("button").click(function(){ //button click method
+    var name = $('#name').val(); //store the value of textbox into variable
+    $("#display").text(name); //display the value of the textbox using Id
+    $("#display").css({"color": "red", "font-size": "200%"}); //styling the text
+});
+});
+</script>
+</head>
+<body>
+Enter a string here
+<input type="text" id="name">
+<p>Click "Try it!" to display the each element in the form</p>
+<button>Display My Entry</button>
+<p id="display"></p>
+</body>
+</html>
