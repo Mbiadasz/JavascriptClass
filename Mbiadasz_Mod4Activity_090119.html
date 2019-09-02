@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+FName: <input type="text" id="FName"><br>
+LName: <input type="text" id="LName"><br>
+Address: <input type="text" id="Address"><br>
+City: <input type="text" id="City"><br>
+State: <input type="text" id="State"><br>
+
+<button onclick="printValues()">Print Values</button>
+
+<script>
+
+// this function is used to get the values from given fields and print this fields
+function printValues() {
+fname = document.getElementById("FName").value;
+lname = document.getElementById("LName").value;
+address = document.getElementById("Address").value;
+city = document.getElementById("City").value;
+state = document.getElementById("State").value;
+document.write("<strong>FName :</strong> "+fname + "\n");
+document.write("<strong>LName : </strong>"+lname + "\n");
+document.write("<strong>Address : </strong>"+address + "\n");
+document.write("<strong>City : </strong>"+city + "\n");
+document.write("<strong>State : </strong>"+state);
+}
+</script>
+</body>
+</html>
