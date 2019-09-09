@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function getValues() {
+var firstName = document.forms["myForm"]["fname"].value;
+       var lastName = document.forms["myForm"]["lname"].value;
+       var address = document.forms["myForm"]["address"].value;
+       var city = document.forms["myForm"]["city"].value;
+       var state = document.forms["myForm"]["state"].value;
+
+       document.getElementById("firstName").innerHTML = "First Name: " + firstName;
+       document.getElementById("lastName").innerHTML = "Last Name: " + lastName;
+       document.getElementById("address").innerHTML = "Address: " + address;
+       document.getElementById("city").innerHTML = "City: " + city;
+       document.getElementById("state").innerHTML = "State: " + state;
+}
+</script>
+</head>
+<body>
+
+<form name="myForm" onsubmit="return false">
+First Name: <input type="text" name="fname"><br>
+Last Name: <input type="text" name="lname"><br>
+Address: <input type="text" name="address"><br>
+City: <input type="text" name="city"><br>
+State: <input type="text" name="state"><br>
+<button type"button" onclick="getValues()">Submit</button><br>
+</form>
+
+<hr>
+<div>
+<p id="firstName" />
+<p id="lastName" />
+<p id="address" />
+<p id="city" />
+<p id="state" />
+</div>
+</body>
+</html>
