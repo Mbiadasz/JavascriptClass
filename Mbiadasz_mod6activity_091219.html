@@ -1,0 +1,24 @@
+<html>
+<head>
+<script>
+function f1()
+{
+dqm1=document.form1.length.value;
+dqm1=parseInt(dqm1);
+y=document.form1.width.value;
+y=parseInt(y);
+area=dqm1*y;
+
+alert("Area is "+area);
+}
+</script>
+</head>
+<body>
+<form name="form1">
+Enter length <input type="text" name="length" />
+</br>
+Enter width<input type="text" name="width" />
+<input type="submit" value="click me" onclick="f1()">
+</form>
+</body>
+</html>
