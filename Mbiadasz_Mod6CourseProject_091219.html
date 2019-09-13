@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function getValues() {
+document.getElementById("tb").style.display = "block";
+var firstName = document.forms["myForm"]["fname"].value;
+var lastName = document.forms["myForm"]["lname"].value;
+var address = document.forms["myForm"]["address"].value;
+var city = document.forms["myForm"]["city"].value;
+var state = document.forms["myForm"]["state"].value;
+//take all that element in id and them make them to print
+document.getElementById("FirstNameColumn").innerHTML="First Name";
+document.getElementById("FirstNamerow").innerHTML=firstName;
+document.getElementById("LastNameColumn").innerHTML="LastName";
+document.getElementById("LastNamerow").innerHTML=lastName;;
+document.getElementById("AddressColumn").innerHTML="Address";
+document.getElementById("Addressrow").innerHTML=address;
+document.getElementById("CityColumn").innerHTML="City";
+document.getElementById("Cityrow").innerHTML=city;
+document.getElementById("StateColumn").innerHTML="State";
+document.getElementById("Staterow").innerHTML=state;
+}
+</script>
+<style>
+tr:hover {
+font-weight:bold;
+   color:blue;
+}
+</style>
+</head>
+<body>
+
+<form name="myForm" onsubmit="return false">
+First Name: <input type="text" name="fname"><br>
+Last Name: <input type="text" name="lname"><br>
+Address: <input type="text" name="address"><br>
+City: <input type="text" name="city"><br>
+State: <input type="text" name="state"><br>
+<button type"button" onclick="getValues()">Submit</button><br>
+</form>
+
+<hr>
+<div>
+<p id="firstName" />
+<p id="lastName" />
+<p id="address" />
+<p id="city" />
+<p id="state" />
+</div>
+<div>
+<table border="1" id="tb"style="display:none;">
+<tr>
+<th id="FirstNameColumn"></th>
+<th id="LastNameColumn"></th>
+<th id="AddressColumn"></th>
+<th id="CityColumn"></th>
+<th id="StateColumn"></th>
+</tr>
+<tr><td id="FirstNamerow"></td>
+<td id="LastNamerow"></td>
+<td id="Addressrow"></td>
+<td id="Cityrow"></td>
+<td id="Staterow"></td>
+</tr>
+</table>
+</div>
+</body>
+</html>
